@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class HDTableDataSource;
 @interface HDViewController : UIViewController
+
+@property (strong, nonatomic) NSMutableArray *arrItems;
+@property (strong, nonatomic) HDTableDataSource *objTableDataSource;
+@property (weak, nonatomic) IBOutlet UITableView *tblItems;
 
 @end

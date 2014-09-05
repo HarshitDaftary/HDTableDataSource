@@ -1,0 +1,17 @@
+PODS:
+  - HDTableDataSource (0.1.0)
+  - Kiwi (2.3.0)
+
+DEPENDENCIES:
+  - HDTableDataSource (from `../`)
+  - Kiwi
+
+EXTERNAL SOURCES:
+  HDTableDataSource:
+    :path: ../
+
+SPEC CHECKSUMS:
+  HDTableDataSource: 41451bf98c594ce99ccaa71a2d099f6ed8858744
+  Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
+
+COCOAPODS: 0.33.1

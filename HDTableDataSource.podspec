@@ -9,20 +9,15 @@
 
 Pod::Spec.new do |s|
   s.name             = "HDTableDataSource"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of HDTableDataSource."
-  s.description      = <<-DESC
-                       An optional longer description of HDTableDataSource
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/HDTableDataSource"
+  s.version          = "1.0"
+  s.summary          = "HDTableDataSource to get rid of tableview datasource methods"
+  s.description      = "HDTableDataSource to get rid of tableview datasource methods. Get your View Controller cleaned up."
+  s.homepage         = "https://github.com/HarshitDaftary/HDTableDataSource"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "HarshitDaftary" => "daftaryharshit@yahoo.co.in" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/HDTableDataSource.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/HarshitDaftary/HDTableDataSource.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/daftaryharshit'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
@@ -33,6 +28,6 @@ Pod::Spec.new do |s|
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
