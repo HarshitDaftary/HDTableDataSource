@@ -1,0 +1,9 @@
+target 'HDTableDataSource', :exclusive => true do
+  pod "HDTableDataSource", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "HDTableDataSource", :path => "../"
+
+  pod 'Kiwi'
+end
