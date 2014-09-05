@@ -20,7 +20,7 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-HarshitDaftary, daftaryharshit@yahoo.co.in
+Harshit Daftary, daftaryharshit@yahoo.co.in
 
 ## License
 
