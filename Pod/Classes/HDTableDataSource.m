@@ -1,9 +1,8 @@
 //
-//  FeedDataSource.m
-//  Pod Builder
+//  HDTableDataSource.m
 //
 //  Created by Harshit Daftary
-//
+
 
 #import "HDTableDataSource.h"
 

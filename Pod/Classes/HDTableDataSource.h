@@ -1,9 +1,6 @@
 //
-//  FeedDataSource.h
-//  Pod Builder
 //
-//  Created by HDBaggy on 11/03/14.
-//  Copyright (c) 2014 Logic Engine. All rights reserved.
+//  Created by Harshit Daftary
 //
 
 #import <Foundation/Foundation.h>
