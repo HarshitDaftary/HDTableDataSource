@@ -9,9 +9,9 @@
 
 Pod::Spec.new do |s|
   s.name             = "HDTableDataSource"
-  s.version          = "1.0"
+  s.version          = "2.0"
   s.summary          = "HDTableDataSource to get rid of tableview datasource methods"
-  s.description      = "HDTableDataSource to get rid of tableview datasource methods. Get your View Controller cleaned up."
+  s.description      = "HDTableDataSource to get rid of tableview datasource methods. Get your View Controller cleaned up. You can also use with Sections."
   s.homepage         = "https://github.com/HarshitDaftary/HDTableDataSource"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
