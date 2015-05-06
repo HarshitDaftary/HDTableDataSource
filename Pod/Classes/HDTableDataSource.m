@@ -1,28 +1,24 @@
 //
-//  TableDataSource.m
-//  RateUpon
+//  FeedDataSource.m
+//  Pod Builder
 //
-//  Created by Administrator on 19/08/14.
-//  Copyright (c) 2014 inheritx. All rights reserved.
+//  Created by HDBaggy on 11/03/14.
+//  Copyright (c) 2014 Logic Engine. All rights reserved.
 //
 
 #import "HDTableDataSource.h"
 
 @implementation HDTableDataSource
 
-- (id)init
-{
-    return nil;
-}
-
-- (id)initWithItems:(NSArray *)anItems cellIdentifier:(NSString *)aCellIdentifier configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock
+- (id)initWithItems:(NSArray *)anItems
+     cellIdentifier:(NSString *)aCellIdentifier
+ configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock
 {
     self = [super init];
-    if (self)
-    {
-        self.arrItems = anItems;
-        self.strCellIdentifier = aCellIdentifier;
-        self.configureCellBlock = [aConfigureCellBlock copy];
+    if (self) {
+        _arrItems = anItems;
+        _strCellIdentifier = aCellIdentifier;
+        _configureCellBlock = [aConfigureCellBlock copy];
     }
     return self;
 }
@@ -32,36 +28,63 @@
     self = [super init];
     if (self)
     {
-        self.arrItems = anItems;
-        self.configureCellBlock = [aConfigureCellBlock copy];
-        self.cellIdentifierForCellBlock = [pMultipleCellIdBlock copy];
+        _arrItems = anItems;
+        _configureCellBlock = [aConfigureCellBlock copy];
+        _cellIdentifierForCellBlock = [pMultipleCellIdBlock copy];
     }
     return self;
 }
 
-- (id)itemAtIndexPath:(NSIndexPath*)indexPath
+- (id)itemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return _arrItems[(NSUInteger)indexPath.row];
+    if (_arrSections != nil)
+    {
+        NSArray *arrItems = [self getItemsArray:indexPath.section];
+        return [arrItems objectAtIndex:indexPath.row];
+    }
+    
+    return [_arrItems objectAtIndex:indexPath.row];
 }
 
-- (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
+-(NSArray*)getItemsArray:(NSInteger)pintSection
 {
-    return _arrItems.count;
+    if (_arrSections == nil)
+        return _arrItems;
+    
+    id objTmpSection = [_arrSections objectAtIndex:pintSection];
+    
+    if (_sectionItemBlock)
+        return _sectionItemBlock(objTmpSection);
+    
+    return nil;
 }
 
-- (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
+#pragma mark UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    if (_arrSections == nil)
+        return 1;
+    
+    return _arrSections.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSArray *arrItems = [self getItemsArray:section];
+    return arrItems.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     id item = [self itemAtIndexPath:indexPath];
     
     if (_cellIdentifierForCellBlock)
         _strCellIdentifier = _cellIdentifierForCellBlock(item,indexPath);
-    
-    id cell = [tableView dequeueReusableCellWithIdentifier:_strCellIdentifier forIndexPath:indexPath];
-    _configureCellBlock(cell,item,indexPath);
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_strCellIdentifier forIndexPath:indexPath];
+    _configureCellBlock(cell, item);
     return cell;
 }
 
 @end
-
-
-

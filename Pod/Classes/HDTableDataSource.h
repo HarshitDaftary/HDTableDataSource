@@ -1,26 +1,34 @@
 //
-//  TableDataSource.h
-//  RateUpon
+//  FeedDataSource.h
+//  Pod Builder
 //
-//  Created by Administrator on 19/08/14.
-//  Copyright (c) 2014 inheritx. All rights reserved.
+//  Created by HDBaggy on 11/03/14.
+//  Copyright (c) 2014 Logic Engine. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef void (^TableViewCellConfigureBlock)(id cell, id item, NSIndexPath *indexPath);
+typedef void (^TableViewCellConfigureBlock)(id cell, id item);
 typedef NSString*(^MultipleCellIdentifierBlock)(id item, NSIndexPath *indexPath);
+typedef NSArray*(^SectionItemArray)(id section);
 
-@interface HDTableDataSource : NSObject <UITableViewDataSource>
+@interface HDTableDataSource : NSObject<UITableViewDataSource>
 
-@property (strong, nonatomic) NSArray *arrItems;
-@property (strong, nonatomic) NSString *strCellIdentifier;
-@property (copy, nonatomic) TableViewCellConfigureBlock configureCellBlock;
+- (id)initWithItems:(NSArray *)anItems
+     cellIdentifier:(NSString *)aCellIdentifier
+ configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock;
+
+- (id)initWithItems:(NSArray *)anItems multipleCellBlock:(MultipleCellIdentifierBlock)pMultipleCellIdBlock configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock;
+
+- (id)itemAtIndexPath:(NSIndexPath *)indexPath;
+
+@property (nonatomic, strong) NSArray *arrItems;
+@property (nonatomic, strong) NSArray *arrSections;
+@property (nonatomic, copy) NSString *strCellIdentifier;
+@property (nonatomic, copy) TableViewCellConfigureBlock configureCellBlock;
+@property (nonatomic, copy) SectionItemArray sectionItemBlock;
 @property (copy, nonatomic) MultipleCellIdentifierBlock cellIdentifierForCellBlock;
 
-- (id)initWithItems:(NSArray *)anItems cellIdentifier:(NSString *)aCellIdentifier configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock;
-- (id)initWithItems:(NSArray *)anItems multipleCellBlock:(MultipleCellIdentifierBlock)pMultipleCellIdBlock configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock;
-- (id)itemAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
