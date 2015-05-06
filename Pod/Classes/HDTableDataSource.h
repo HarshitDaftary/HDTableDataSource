@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef void (^TableViewCellConfigureBlock)(id cell, id item);
-typedef NSString*(^MultipleCellIdentifierBlock)(id item, NSIndexPath *indexPath);
+typedef void (^TableViewCellConfigureBlock)(id cell, id item,NSIndexPath *indexPath);
+typedef NSString*(^CellIdentifierBlock)(id item, NSIndexPath *indexPath);
 typedef NSArray*(^SectionItemArray)(id section);
 
 @interface HDTableDataSource : NSObject<UITableViewDataSource>
@@ -19,7 +19,7 @@ typedef NSArray*(^SectionItemArray)(id section);
      cellIdentifier:(NSString *)aCellIdentifier
  configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock;
 
-- (id)initWithItems:(NSArray *)anItems multipleCellBlock:(MultipleCellIdentifierBlock)pMultipleCellIdBlock configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock;
+- (id)initWithItems:(NSArray *)anItems multipleCellBlock:(CellIdentifierBlock)pMultipleCellIdBlock configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock;
 
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath;
 
@@ -28,7 +28,7 @@ typedef NSArray*(^SectionItemArray)(id section);
 @property (nonatomic, copy) NSString *strCellIdentifier;
 @property (nonatomic, copy) TableViewCellConfigureBlock configureCellBlock;
 @property (nonatomic, copy) SectionItemArray sectionItemBlock;
-@property (copy, nonatomic) MultipleCellIdentifierBlock cellIdentifierForCellBlock;
+@property (copy, nonatomic) CellIdentifierBlock cellIdentifierForCellBlock;
 
 
 @end

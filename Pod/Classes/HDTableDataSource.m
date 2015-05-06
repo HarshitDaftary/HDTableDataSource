@@ -2,8 +2,7 @@
 //  FeedDataSource.m
 //  Pod Builder
 //
-//  Created by HDBaggy on 11/03/14.
-//  Copyright (c) 2014 Logic Engine. All rights reserved.
+//  Created by Harshit Daftary
 //
 
 #import "HDTableDataSource.h"
@@ -23,7 +22,7 @@
     return self;
 }
 
-- (id)initWithItems:(NSArray *)anItems multipleCellBlock:(MultipleCellIdentifierBlock)pMultipleCellIdBlock configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock
+- (id)initWithItems:(NSArray *)anItems multipleCellBlock:(CellIdentifierBlock)pMultipleCellIdBlock configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock
 {
     self = [super init];
     if (self)
@@ -78,12 +77,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     id item = [self itemAtIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_strCellIdentifier forIndexPath:indexPath];
     
     if (_cellIdentifierForCellBlock)
         _strCellIdentifier = _cellIdentifierForCellBlock(item,indexPath);
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_strCellIdentifier forIndexPath:indexPath];
-    _configureCellBlock(cell, item);
+    _configureCellBlock(cell, item, indexPath);
     return cell;
 }
 
