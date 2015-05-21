@@ -16,10 +16,10 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HDTableDataSource"
-  s.version      = "2.0"
+  s.version      = "2.2"
   s.summary      = "HDTableDataSource to get rid of Tableview methods."
 
-  s.description  = "HDTableDataSource to get rid of Tableview methods."
+  s.description  = "HDTableDataSource to get rid of Tableview methods. This version now supports Multiple sections too!!!"
 
   s.homepage     = "https://github.com/HarshitDaftary/HDTableDataSource"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -57,7 +57,7 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # s.platform     = :ios
+    s.platform     = :ios
   # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
@@ -71,7 +71,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/HarshitDaftary/HDTableDataSource.git", :tag => "2.0" }
+s.source       = { :git => "https://github.com/HarshitDaftary/HDTableDataSource.git", :tag => "2.2", :commit => 'e44bbc6ed896804e2322ace5c8ee74c84d81dbdd'}
+
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -111,7 +112,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.frameworks = 'UIKit'
+  s.frameworks = "UIKit"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"

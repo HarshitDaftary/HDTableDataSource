@@ -1,7 +1,6 @@
 //
-//  HDTableDataSource.m
 //
-//  Created by Harshit Daftary
+//  Created by Harshit Daftary on 21 May 2015
 
 
 #import "HDTableDataSource.h"

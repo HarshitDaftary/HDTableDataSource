@@ -1,10 +1,10 @@
 //
 //
-//  Created by Harshit Daftary
-//
+//  Created by Harshit Daftary on 21 May 2015
+
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+// Import UIKit framework here or in .pch file
 
 typedef void (^TableViewCellConfigureBlock)(id cell, id item,NSIndexPath *indexPath);
 typedef NSString*(^CellIdentifierBlock)(id item, NSIndexPath *indexPath);

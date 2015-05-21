@@ -35,7 +35,7 @@
 -(void)configureCell:(ClsRed*)pobjRed
 {
     _lblName.text = pobjRed.strName;
-    _lblPoints.text = [NSString stringWithFormat:@"%d",pobjRed.intPoint];
+    _lblPoints.text = [NSString stringWithFormat:@"%ld",(long)pobjRed.intPoint];
 }
 
 @end

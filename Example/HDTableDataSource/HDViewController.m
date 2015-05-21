@@ -52,6 +52,8 @@
         
     } configureCellBlock:^(id cell, id item, NSIndexPath *indexPath) {
         
+        id blocksItem = nil;
+        
         if ([item isKindOfClass:[ClsRed class]])
         {
             HDRedCell *objRedCell = (HDRedCell*)cell;
@@ -59,12 +61,17 @@
         }
         else
         {
+
             HDBlueCell *objBlueCell = (HDBlueCell*)cell;
             [objBlueCell configureCell:item];
+            blocksItem = objBlueCell;
         }
+        
+
     }];
     _tblItems.dataSource= _objTableDataSource;
-
+    
+    
 }
 
 #pragma mark - Other Methods
