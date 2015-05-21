@@ -4,7 +4,7 @@
 
 
 #import <Foundation/Foundation.h>
-// Import UIKit framework here or in .pch file
+#import <UIKit/UIKit.h>
 
 typedef void (^TableViewCellConfigureBlock)(id cell, id item,NSIndexPath *indexPath);
 typedef NSString*(^CellIdentifierBlock)(id item, NSIndexPath *indexPath);

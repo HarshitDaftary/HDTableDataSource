@@ -75,11 +75,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     id item = [self itemAtIndexPath:indexPath];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_strCellIdentifier forIndexPath:indexPath];
     
     if (_cellIdentifierForCellBlock)
         _strCellIdentifier = _cellIdentifierForCellBlock(item,indexPath);
-
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_strCellIdentifier forIndexPath:indexPath];
     _configureCellBlock(cell, item, indexPath);
     return cell;
 }

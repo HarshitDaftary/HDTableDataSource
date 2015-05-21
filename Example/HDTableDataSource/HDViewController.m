@@ -1,10 +1,6 @@
 //
-//  HDViewController.m
-//  HDTableDataSource
 //
-//  Created by HarshitDaftary on 09/05/2014.
-//  Copyright (c) 2014 HarshitDaftary. All rights reserved.
-//
+//  Created by Harshit Daftary on 21 May 2015
 
 #import "HDViewController.h"
 #import "HDTableDataSource.h"
@@ -19,6 +15,8 @@
 
 @implementation HDViewController
 
+#pragma mark - View Lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -26,11 +24,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark - Initializations
 
 -(void)initializeOnce
 {
@@ -66,12 +60,9 @@
             [objBlueCell configureCell:item];
             blocksItem = objBlueCell;
         }
-        
-
     }];
+    
     _tblItems.dataSource= _objTableDataSource;
-    
-    
 }
 
 #pragma mark - Other Methods
@@ -93,7 +84,7 @@
     [_arrItems addObject:objRed];
     
     objRed = [[ClsRed alloc] init];
-    objRed.strName = @"Harshit2222";
+    objRed.strName = @"Harshit2232";
     objRed.intPoint = 20;
     [_arrItems addObject:objRed];
     
@@ -118,4 +109,18 @@
 
 }
 
+#pragma mark - Button Tap Events
+
+- (IBAction)btnShowMultipleSectionTapped:(id)sender
+{
+    [self performSegueWithIdentifier:@"showMultipleSectionScreen" sender:nil];
+}
+
+#pragma mark - Memory Management
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 @end

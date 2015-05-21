@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HDTableDataSource"
-  s.version      = "2.2"
+  s.version      = "2.4"
   s.summary      = "HDTableDataSource to get rid of Tableview methods."
 
   s.description  = "HDTableDataSource to get rid of Tableview methods. This version now supports Multiple sections too!!!"
@@ -71,7 +71,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-s.source       = { :git => "https://github.com/HarshitDaftary/HDTableDataSource.git", :tag => "2.2", :commit => 'e44bbc6ed896804e2322ace5c8ee74c84d81dbdd'}
+s.source       = { :git => "https://github.com/HarshitDaftary/HDTableDataSource.git", :tag => "2.4", :commit => 'e44bbc6ed896804e2322ace5c8ee74c84d81dbdd'}
 
 
 

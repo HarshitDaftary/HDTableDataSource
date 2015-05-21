@@ -4,11 +4,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class ClsBlue;
-@interface HDBlueCell : UITableViewCell
+@interface CustomSectionView : UIView
 
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
-
--(void)configureCell:(ClsBlue*)pobjBlue;
 
 @end

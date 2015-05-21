@@ -29,6 +29,10 @@
 		CF146DAC19B9C83D005BC7FB /* ClsRed.m in Sources */ = {isa = PBXBuildFile; fileRef = CF146DAB19B9C83D005BC7FB /* ClsRed.m */; };
 		CF146DAF19B9C848005BC7FB /* ClsBlue.m in Sources */ = {isa = PBXBuildFile; fileRef = CF146DAE19B9C848005BC7FB /* ClsBlue.m */; };
 		CF146DB519B9D499005BC7FB /* HDTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CF146DB419B9D499005BC7FB /* HDTableDataSource.m */; };
+		CF88D3531B0DDF18008F2F09 /* HDMultiSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF88D3521B0DDF18008F2F09 /* HDMultiSectionViewController.m */; };
+		CF88D3571B0DE22F008F2F09 /* ClsColorCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CF88D3561B0DE22F008F2F09 /* ClsColorCategory.m */; };
+		CF88D35B1B0DE5DF008F2F09 /* CustomSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF88D35A1B0DE5DF008F2F09 /* CustomSectionView.m */; };
+		CF88D35D1B0DE8A3008F2F09 /* CustomSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF88D35C1B0DE8A3008F2F09 /* CustomSectionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,13 @@
 		CF146DAE19B9C848005BC7FB /* ClsBlue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClsBlue.m; sourceTree = "<group>"; };
 		CF146DB319B9D499005BC7FB /* HDTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDTableDataSource.h; sourceTree = "<group>"; };
 		CF146DB419B9D499005BC7FB /* HDTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDTableDataSource.m; sourceTree = "<group>"; };
+		CF88D3511B0DDF18008F2F09 /* HDMultiSectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDMultiSectionViewController.h; sourceTree = "<group>"; };
+		CF88D3521B0DDF18008F2F09 /* HDMultiSectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDMultiSectionViewController.m; sourceTree = "<group>"; };
+		CF88D3551B0DE22F008F2F09 /* ClsColorCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClsColorCategory.h; sourceTree = "<group>"; };
+		CF88D3561B0DE22F008F2F09 /* ClsColorCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClsColorCategory.m; sourceTree = "<group>"; };
+		CF88D3591B0DE5DF008F2F09 /* CustomSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSectionView.h; sourceTree = "<group>"; };
+		CF88D35A1B0DE5DF008F2F09 /* CustomSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSectionView.m; sourceTree = "<group>"; };
+		CF88D35C1B0DE8A3008F2F09 /* CustomSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomSectionView.xib; sourceTree = "<group>"; };
 		F9C51C287D574521865F8482 /* libPods-HDTableDataSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HDTableDataSource.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +157,7 @@
 		6003F593195388D20070C39A /* HDTableDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				CF88D3581B0DE5C8008F2F09 /* CustomClass */,
 				CF146DA719B9C81F005BC7FB /* ModelClass */,
 				CF146D9E19B9C6CB005BC7FB /* CustomCells */,
 				CF146D9719B9BA82005BC7FB /* Classes */,
@@ -157,6 +169,8 @@
 				6003F5A6195388D20070C39A /* HDViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				CF88D3511B0DDF18008F2F09 /* HDMultiSectionViewController.h */,
+				CF88D3521B0DDF18008F2F09 /* HDMultiSectionViewController.m */,
 			);
 			path = HDTableDataSource;
 			sourceTree = "<group>";
@@ -241,6 +255,7 @@
 		CF146DA719B9C81F005BC7FB /* ModelClass */ = {
 			isa = PBXGroup;
 			children = (
+				CF88D3541B0DE221008F2F09 /* ClsColorCategory */,
 				CF146DA819B9C830005BC7FB /* ClsBlue */,
 				CF146DA919B9C830005BC7FB /* ClsRed */,
 			);
@@ -263,6 +278,25 @@
 				CF146DAB19B9C83D005BC7FB /* ClsRed.m */,
 			);
 			path = ClsRed;
+			sourceTree = "<group>";
+		};
+		CF88D3541B0DE221008F2F09 /* ClsColorCategory */ = {
+			isa = PBXGroup;
+			children = (
+				CF88D3551B0DE22F008F2F09 /* ClsColorCategory.h */,
+				CF88D3561B0DE22F008F2F09 /* ClsColorCategory.m */,
+			);
+			path = ClsColorCategory;
+			sourceTree = "<group>";
+		};
+		CF88D3581B0DE5C8008F2F09 /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				CF88D3591B0DE5DF008F2F09 /* CustomSectionView.h */,
+				CF88D35A1B0DE5DF008F2F09 /* CustomSectionView.m */,
+				CF88D35C1B0DE8A3008F2F09 /* CustomSectionView.xib */,
+			);
+			path = CustomClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +382,7 @@
 			files = (
 				6003F5A4195388D20070C39A /* Main_iPad.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				CF88D35D1B0DE8A3008F2F09 /* CustomSectionView.xib in Resources */,
 				6003F5A1195388D20070C39A /* Main_iPhone.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -431,13 +466,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF88D3531B0DDF18008F2F09 /* HDMultiSectionViewController.m in Sources */,
 				6003F59E195388D20070C39A /* HDAppDelegate.m in Sources */,
+				CF88D3571B0DE22F008F2F09 /* ClsColorCategory.m in Sources */,
 				CF146DA319B9C6EA005BC7FB /* HDBlueCell.m in Sources */,
 				CF146DAC19B9C83D005BC7FB /* ClsRed.m in Sources */,
 				6003F5A7195388D20070C39A /* HDViewController.m in Sources */,
 				CF146DA619B9C6FA005BC7FB /* HDRedCell.m in Sources */,
 				CF146DB519B9D499005BC7FB /* HDTableDataSource.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				CF88D35B1B0DE5DF008F2F09 /* CustomSectionView.m in Sources */,
 				CF146DAF19B9C848005BC7FB /* ClsBlue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

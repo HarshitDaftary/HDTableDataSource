@@ -5,12 +5,11 @@
 #import <UIKit/UIKit.h>
 
 @class HDTableDataSource;
-@interface HDViewController : UIViewController
+@interface HDMultiSectionViewController : UIViewController <UITableViewDelegate>
 
-@property (strong, nonatomic) NSMutableArray *arrItems;
+@property (strong, nonatomic) NSMutableArray *arrCategories;
 @property (strong, nonatomic) HDTableDataSource *objTableDataSource;
 @property (weak, nonatomic) IBOutlet UITableView *tblItems;
 
-- (IBAction)btnShowMultipleSectionTapped:(id)sender;
-
+- (IBAction)btnBackTapped:(id)sender;
 @end

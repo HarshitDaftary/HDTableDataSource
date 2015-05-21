@@ -1,10 +1,6 @@
 //
-//  HDBlueCell.m
-//  HDTableDataSource
 //
-//  Created by Administrator on 05/09/14.
-//  Copyright (c) 2014 HarshitDaftary. All rights reserved.
-//
+//  Created by Harshit Daftary on 21 May 2015
 
 #import "HDBlueCell.h"
 #import "ClsBlue.h"
