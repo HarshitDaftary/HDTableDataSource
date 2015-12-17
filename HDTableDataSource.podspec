@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HDTableDataSource"
-  s.version      = "2.4"
+  s.version      = "2.5"
   s.summary      = "HDTableDataSource to get rid of Tableview methods."
 
   s.description  = "HDTableDataSource to get rid of Tableview methods. This version now supports Multiple sections too!!!"
